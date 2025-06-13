@@ -26,6 +26,7 @@
         </div>
         {% else %}
         <table class="table">
+            <tbody>
             <thead>
                 <tr>
                     <th scope="col">Sno</th>
@@ -35,8 +36,10 @@
                     <th scope="col">Action</th>
                 </tr>
             </thead>
-            <tbody>
+            </tbody>
+            
                 {% for todo in allTodo %}
+                
                 <tr>
                     <th scope="row">{{loop.index}}</th>
                     <td>{{todo.title}}</td>
@@ -49,9 +52,10 @@
                                 class="btn btn-outline-secondary btn-sm mx-1">Delete</button>
                     </td>
                 </tr>
-            </tbody>
-        </table>
+        
         {% endfor %}
+        </tbody>
+        </table>
         {% endif %}
 
 
